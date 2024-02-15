@@ -37,6 +37,8 @@ jobs:
           yarn gen
           git add .
           git commit -m "[Icona] Generate Files"
-          git push
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Git Push to main
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
