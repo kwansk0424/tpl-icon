@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsNoteAdd = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsNoteAdd = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -22,10 +28,11 @@ const IconsNoteAdd = (props) => (
     </mask>
     <g mask="url(#prefix__a)">
       <path
-        fill="#000"
+        fill="currentColor"
         d="M11 18h2v-3h3v-2h-3v-3h-2v3H8v2h3zm-5 4q-.824 0-1.412-.587A1.93 1.93 0 0 1 4 20V4q0-.824.588-1.412A1.93 1.93 0 0 1 6 2h8l6 6v12q0 .824-.587 1.413A1.93 1.93 0 0 1 18 22zm7-13V4H6v16h12V9z"
       />
     </g>
   </svg>
 );
-export default IconsNoteAdd;
+const ForwardRef = forwardRef(IconsNoteAdd);
+export default ForwardRef;

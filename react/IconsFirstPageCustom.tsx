@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsFirstPageCustom = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsFirstPageCustom = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -20,10 +26,11 @@ const IconsFirstPageCustom = (props) => (
     >
       <path fill="#D9D9D9" d="M0 0h24v24H0z" />
     </mask>
-    <g fill="#000" mask="url(#prefix__a)">
+    <g fill="currentColor" mask="url(#prefix__a)">
       <path d="m7.8 11.7 4.6 4.6-1.4 1.4-6-6 6-6 1.4 1.4z" />
       <path d="m14.2 11.7 4.6 4.6-1.4 1.4-6-6 6-6 1.4 1.4z" />
     </g>
   </svg>
 );
-export default IconsFirstPageCustom;
+const ForwardRef = forwardRef(IconsFirstPageCustom);
+export default ForwardRef;
