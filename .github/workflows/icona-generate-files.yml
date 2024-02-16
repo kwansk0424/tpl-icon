@@ -38,3 +38,20 @@ jobs:
           git add .
           git commit -m "[Icona] Generate Files"
           git push
+      - name: Send Telegram Notification
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_ALARM_TOPIC: ${{ secrets.TELEGRAM_ALARM_TOPIC }}
+          STATUS: ${{ job.status }}
+        run: |
+          if [ "${STATUS}" = "success" ]; then
+            MESSAGE="GitHub Actions: Deploy Successful! 🤧"
+          else
+            MESSAGE="GitHub Actions: Error while deploying icons 😭"
+          fi
+
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d "chat_id=${TELEGRAM_CHAT_ID}" \
+            -d "text=${MESSAGE}"
+            -d "message_thread_id:${TELEGRAM_ALARM_TOPIC}"
