@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsRecall = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsRecall = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -20,7 +26,7 @@ const IconsRecall = (props) => (
     >
       <path fill="#D9D9D9" d="M0 0h24v24H0z" />
     </mask>
-    <g fill="#000" mask="url(#prefix__a)">
+    <g fill="currentColor" mask="url(#prefix__a)">
       <path
         fillRule="evenodd"
         d="M12 2a1 1 0 0 1 1 1v1c-.628.835-1 1.874-1 3s.372 2.165 1 3v.264q.22.13.412.324.194.193.324.412h.263c.836.628 1.875 1 3.001 1a4.98 4.98 0 0 0 3-1h1a1 1 0 1 1 0 2h-3.075q-.286 1.86-1.675 3.25T13 17.925V21a1 1 0 1 1-2 0v-3.075q-1.86-.286-3.25-1.675T6.075 13H3a1 1 0 1 1 0-2h3.075Q6.36 9.14 7.75 7.75T11 6.075V3a1 1 0 0 1 1-1M9.175 9.175Q9.977 8.373 11 8.118v2.146a2 2 0 0 0-.412.324 2 2 0 0 0-.324.412H8.118q.255-1.023 1.057-1.825m1.412 4.237q.194.194.413.324v2.146q-1.023-.255-1.825-1.057T8.118 13h2.146q.13.22.324.412m2.413.324v2.146q1.023-.255 1.825-1.057T15.882 13h-2.146a2 2 0 0 1-.324.412 2 2 0 0 1-.412.324"
@@ -30,4 +36,5 @@ const IconsRecall = (props) => (
     </g>
   </svg>
 );
-export default IconsRecall;
+const ForwardRef = forwardRef(IconsRecall);
+export default ForwardRef;

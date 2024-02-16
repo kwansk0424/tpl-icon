@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsExclamation = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsExclamation = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -22,10 +28,11 @@ const IconsExclamation = (props) => (
     </mask>
     <g mask="url(#prefix__a)">
       <path
-        fill="#000"
+        fill="currentColor"
         d="M12 14a.97.97 0 0 1-.713-.287A.97.97 0 0 1 11 13V6q0-.424.287-.713A.97.97 0 0 1 12 5q.424 0 .713.287Q13 5.576 13 6v7q0 .424-.287.713A.97.97 0 0 1 12 14m0 5a.97.97 0 0 1-.713-.288A.97.97 0 0 1 11 18q0-.424.287-.712A.97.97 0 0 1 12 17q.424 0 .713.288.287.287.287.712 0 .424-.287.712A.97.97 0 0 1 12 19"
       />
     </g>
   </svg>
 );
-export default IconsExclamation;
+const ForwardRef = forwardRef(IconsExclamation);
+export default ForwardRef;

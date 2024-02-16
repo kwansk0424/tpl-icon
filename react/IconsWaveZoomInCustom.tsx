@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsWaveZoomInCustom = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsWaveZoomInCustom = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -20,7 +26,7 @@ const IconsWaveZoomInCustom = (props) => (
     >
       <path fill="#D9D9D9" d="M0 0h24v24H0z" />
     </mask>
-    <g fill="#000" mask="url(#prefix__a)">
+    <g fill="currentColor" mask="url(#prefix__a)">
       <path
         fillRule="evenodd"
         d="M6.817 14.717V7.733q0-.39.275-.653a.92.92 0 0 1 .658-.263.9.9 0 0 1 .65.263.88.88 0 0 1 .267.653v7q0 .39-.264.653a.89.89 0 0 1-.653.264.9.9 0 0 1-.658-.275.9.9 0 0 1-.275-.658m4.666-5.038a5 5 0 0 0-1.833 1.854V4.917q0-.39.264-.653A.89.89 0 0 1 10.567 4q.39 0 .653.264a.89.89 0 0 1 .263.653zM14 9q.15 0 .3.009V7.733a.88.88 0 0 0-.267-.653.9.9 0 0 0-.65-.263.92.92 0 0 0-.658.263.87.87 0 0 0-.275.653v1.512A5 5 0 0 1 14 9m2.628.746q.07.042.137.088a1 1 0 0 0-.137-.088M4 11.883v-1.316q0-.39.275-.653a.92.92 0 0 1 .658-.264q.384 0 .65.275a.91.91 0 0 1 .267.658V11.9q0 .39-.264.653a.89.89 0 0 1-.653.264.9.9 0 0 1-.658-.275.9.9 0 0 1-.275-.659"
@@ -31,4 +37,5 @@ const IconsWaveZoomInCustom = (props) => (
     </g>
   </svg>
 );
-export default IconsWaveZoomInCustom;
+const ForwardRef = forwardRef(IconsWaveZoomInCustom);
+export default ForwardRef;
