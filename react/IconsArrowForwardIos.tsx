@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsArrowForwardIos = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsArrowForwardIos = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -22,10 +28,11 @@ const IconsArrowForwardIos = (props) => (
     </mask>
     <g mask="url(#prefix__a)">
       <path
-        fill="#000"
-        d="m14.475 12-7.35-7.35a1.17 1.17 0 0 1-.363-.888 1.26 1.26 0 0 1 .388-.887q.375-.375.887-.375.513 0 .888.375l7.675 7.7q.3.3.45.675t.15.75-.15.75-.45.675l-7.7 7.7q-.375.374-.875.363a1.25 1.25 0 0 1-.875-.388 1.21 1.21 0 0 1-.375-.888q0-.512.375-.887z"
+        fill="currentColor"
+        d="m14.475 12-7.35-7.35a1.17 1.17 0 0 1-.362-.888 1.26 1.26 0 0 1 .387-.887q.375-.375.887-.375.513 0 .888.375l7.675 7.7q.3.3.45.675t.15.75-.15.75-.45.675l-7.7 7.7q-.375.374-.875.363a1.25 1.25 0 0 1-.875-.388 1.21 1.21 0 0 1-.375-.888q0-.512.375-.887z"
       />
     </g>
   </svg>
 );
-export default IconsArrowForwardIos;
+const ForwardRef = forwardRef(IconsArrowForwardIos);
+export default ForwardRef;

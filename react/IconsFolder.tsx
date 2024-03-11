@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsFolder = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsFolder = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -22,10 +28,11 @@ const IconsFolder = (props) => (
     </mask>
     <g mask="url(#prefix__a)">
       <path
-        fill="#000"
+        fill="currentColor"
         d="M4 20q-.824 0-1.412-.587A1.93 1.93 0 0 1 2 18V6q0-.824.587-1.412A1.93 1.93 0 0 1 4 4h5.175a1.98 1.98 0 0 1 1.4.575L12 6h8q.824 0 1.413.588Q22 7.175 22 8v10q0 .824-.587 1.413A1.93 1.93 0 0 1 20 20z"
       />
     </g>
   </svg>
 );
-export default IconsFolder;
+const ForwardRef = forwardRef(IconsFolder);
+export default ForwardRef;

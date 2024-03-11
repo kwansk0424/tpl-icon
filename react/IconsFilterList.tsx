@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsFilterList = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsFilterList = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -21,8 +27,9 @@ const IconsFilterList = (props) => (
       <path fill="#D9D9D9" d="M0 0h24v24H0z" />
     </mask>
     <g mask="url(#prefix__a)">
-      <path fill="#000" d="M10 18v-2h4v2zm-4-5v-2h12v2zM3 8V6h18v2z" />
+      <path fill="currentColor" d="M10 18v-2h4v2zm-4-5v-2h12v2zM3 8V6h18v2z" />
     </g>
   </svg>
 );
-export default IconsFilterList;
+const ForwardRef = forwardRef(IconsFilterList);
+export default ForwardRef;
