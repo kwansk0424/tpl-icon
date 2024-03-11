@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsTerminal = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsTerminal = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -22,10 +28,11 @@ const IconsTerminal = (props) => (
     </mask>
     <g mask="url(#prefix__a)">
       <path
-        fill="#000"
+        fill="currentColor"
         d="M4 20q-.824 0-1.412-.587A1.93 1.93 0 0 1 2 18V6q0-.824.587-1.412A1.93 1.93 0 0 1 4 4h16q.824 0 1.413.588Q22 5.175 22 6v12q0 .824-.587 1.413A1.93 1.93 0 0 1 20 20zm0-2h16V8H4zm3.5-1-1.4-1.4L8.675 13l-2.6-2.6L7.5 9l4 4zm4.5 0v-2h6v2z"
       />
     </g>
   </svg>
 );
-export default IconsTerminal;
+const ForwardRef = forwardRef(IconsTerminal);
+export default ForwardRef;
