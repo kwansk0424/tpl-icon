@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsKeyboardArrowUp = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsKeyboardArrowUp = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -21,8 +27,9 @@ const IconsKeyboardArrowUp = (props) => (
       <path fill="#D9D9D9" d="M0 0h24v24H0z" />
     </mask>
     <g mask="url(#prefix__a)">
-      <path fill="#000" d="m12 10.8-4.6 4.6L6 14l6-6 6 6-1.4 1.4z" />
+      <path fill="currentColor" d="m12 10.8-4.6 4.6L6 14l6-6 6 6-1.4 1.4z" />
     </g>
   </svg>
 );
-export default IconsKeyboardArrowUp;
+const ForwardRef = forwardRef(IconsKeyboardArrowUp);
+export default ForwardRef;
