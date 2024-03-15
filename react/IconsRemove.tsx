@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsRemove = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsRemove = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -22,10 +28,11 @@ const IconsRemove = (props) => (
     </mask>
     <g mask="url(#prefix__a)">
       <path
-        fill="#000"
+        fill="currentColor"
         d="M6 13a.97.97 0 0 1-.713-.287A.97.97 0 0 1 5 12q0-.424.287-.713A.97.97 0 0 1 6 11h12q.424 0 .712.287.288.288.288.713 0 .424-.288.713A.97.97 0 0 1 18 13z"
       />
     </g>
   </svg>
 );
-export default IconsRemove;
+const ForwardRef = forwardRef(IconsRemove);
+export default ForwardRef;

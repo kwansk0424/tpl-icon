@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsArrowDropDown = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsArrowDropDown = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -21,8 +27,9 @@ const IconsArrowDropDown = (props) => (
       <path fill="#D9D9D9" d="M0 0h24v24H0z" />
     </mask>
     <g mask="url(#prefix__a)">
-      <path fill="#000" d="m12 15-5-5h10z" />
+      <path fill="currentColor" d="m12 15-5-5h10z" />
     </g>
   </svg>
 );
-export default IconsArrowDropDown;
+const ForwardRef = forwardRef(IconsArrowDropDown);
+export default ForwardRef;

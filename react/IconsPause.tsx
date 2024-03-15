@@ -1,10 +1,16 @@
-import * as React from 'react';
-const IconsPause = (props) => (
+import type { SVGProps } from 'react';
+import { Ref, forwardRef } from 'react';
+const IconsPause = (
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={24}
     fill="none"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    ref={ref}
     {...props}
   >
     <mask
@@ -22,10 +28,11 @@ const IconsPause = (props) => (
     </mask>
     <g mask="url(#prefix__a)">
       <path
-        fill="#000"
+        fill="currentColor"
         d="M13 19V5h6v14zm-8 0V5h6v14zm10-2h2V7h-2zm-8 0h2V7H7z"
       />
     </g>
   </svg>
 );
-export default IconsPause;
+const ForwardRef = forwardRef(IconsPause);
+export default ForwardRef;
