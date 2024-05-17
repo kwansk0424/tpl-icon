@@ -1098,5 +1098,25 @@
       "3x": "",
       "4x": ""
     }
+  },
+  "icons_expand_content": {
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g id=\"Property 1=expand_content\">\n<mask id=\"mask0_2034_23\" style=\"mask-type:alpha\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"24\" height=\"24\">\n<rect id=\"Bounding box\" width=\"24\" height=\"24\" fill=\"#D9D9D9\"/>\n</mask>\n<g mask=\"url(#mask0_2034_23)\">\n<path id=\"expand_content\" d=\"M5 19V13H7V17H11V19H5ZM17 11V7H13V5H19V11H17Z\" fill=\"black\"/>\n</g>\n</g>\n</svg>\n",
+    "name": "icons_expand_content",
+    "png": {
+      "1x": "",
+      "2x": "",
+      "3x": "",
+      "4x": ""
+    }
+  },
+  "icons_collapse_content": {
+    "svg": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<g id=\"Property 1=collapse_content\">\n<mask id=\"mask0_2034_22\" style=\"mask-type:alpha\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"24\" height=\"24\">\n<rect id=\"Bounding box\" width=\"24\" height=\"24\" fill=\"#D9D9D9\"/>\n</mask>\n<g mask=\"url(#mask0_2034_22)\">\n<path id=\"collapse_content\" d=\"M11 13V19H9V15H5V13H11ZM15 5V9H19V11H13V5H15Z\" fill=\"black\"/>\n</g>\n</g>\n</svg>\n",
+    "name": "icons_collapse_content",
+    "png": {
+      "1x": "",
+      "2x": "",
+      "3x": "",
+      "4x": ""
+    }
   }
 }
