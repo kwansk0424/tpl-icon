@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <group>
+        <clip-path
+            android:pathData="M0 0h24v24H0z"/>
+        <group>
+            <path
+                android:fillColor="#FF1C1B1F"
+                android:pathData="M12 23.3L8.65 20H4v-4.65L0.7 12 4 8.65V4h4.65L12 0.7 15.35 4H20v4.65L23.3 12 20 15.35V20h-4.65L12 23.3Zm0-6.3c1.38 0 2.56-0.49 3.54-1.46C16.5 14.56 17 13.38 17 12s-0.49-2.56-1.46-3.54C14.56 7.5 13.38 7 12 7S9.44 7.49 8.46 8.46C7.5 9.44 7 10.62 7 12s0.49 2.56 1.46 3.54C9.44 16.5 10.62 17 12 17Zm0-2c-0.83 0-1.54-0.3-2.12-0.88C9.29 13.54 9 12.84 9 12c0-0.83 0.3-1.54 0.88-2.12C10.46 9.29 11.17 9 12 9c0.83 0 1.54 0.3 2.13 0.88C14.7 10.46 15 11.17 15 12c0 0.83-0.3 1.54-0.88 2.13C13.54 14.7 12.84 15 12 15Zm0 5.5l2.5-2.5H18v-3.5l2.5-2.5L18 9.5V6h-3.5L12 3.5 9.5 6H6v3.5L3.5 12 6 14.5V18h3.5l2.5 2.5Z"/>
+        </group>
+    </group>
+</vector>
