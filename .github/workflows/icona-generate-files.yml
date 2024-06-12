@@ -46,9 +46,9 @@ jobs:
           STATUS: ${{ job.status }}
         run: |
           if [ "${STATUS}" = "success" ]; then
-            MESSAGE="GitHub Actions: Deploy Successful! 🤧"
+            MESSAGE="@tpl/icons: Deploy Successful from GITHUB! 🤧"
           else
-            MESSAGE="GitHub Actions: Error while deploying icons 😭"
+            MESSAGE="@tpl/icons: Error while deploying icons 😭"
           fi
 
           curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
