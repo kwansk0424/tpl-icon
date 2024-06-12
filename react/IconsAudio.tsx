@@ -1,6 +1,6 @@
 import type { SVGProps } from 'react';
 import { Ref, forwardRef } from 'react';
-const IconsBrandAwareness = (
+const IconsAudio = (
   props: SVGProps<SVGSVGElement>,
   ref: Ref<SVGSVGElement>
 ) => (
@@ -34,5 +34,5 @@ const IconsBrandAwareness = (
     </g>
   </svg>
 );
-const ForwardRef = forwardRef(IconsBrandAwareness);
+const ForwardRef = forwardRef(IconsAudio);
 export default ForwardRef;
