@@ -1,6 +1,6 @@
 {
   "name": "@tpl/icon",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "license": "MIT",
   "scripts": {
     "gen": "yarn ts-node ./icona.config.ts"
